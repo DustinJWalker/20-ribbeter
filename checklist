@@ -8,9 +8,9 @@
 * [x ] **Checkpoint:** Run `./ace auth:setup` to create User migrations and model!
 * [x ] **Checkpoint:** Run `./ace migration:run` to run the migrations to setup the database for users
 * [x] **Checkpoint:** Create a `layout` view
-  * [ ] Add top nav
-  * [ ] Link a stylesheet to `/dist/app.css` to include SASS styles
-  * [ ] Make a block so that views that extend from `layout` can put content in to the page
+  * [x ] Add top nav
+  * [x ] Link a stylesheet to `/dist/app.css` to include SASS styles
+  * [ x] Make a block so that views that extend from `layout` can put content in to the page
   * [ ] Style it!
 * [ ] **Checkpoint:** Create a `register` page
   * [ ] Generate a User controller with `./ace make:controller`

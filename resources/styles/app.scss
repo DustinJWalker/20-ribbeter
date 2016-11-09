@@ -5,4 +5,27 @@ $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 @import 'font-awesome/scss/font-awesome';
 @import 'box-sizing';
 
-@import 'adonis';
+// @import 'adonis';
+
+body {
+  margin: 0 auto;
+  background: #EDF7F2;
+  font: $font;
+}
+
+a {
+  text-decoration: none;
+}
+
+.top__nav {
+  background: #97C93C;
+  color: #eee;
+
+  &-title {
+    font-size: 1.5rem;
+  }
+
+  &-items {
+    font-size: 1.5rem;
+  }
+}
