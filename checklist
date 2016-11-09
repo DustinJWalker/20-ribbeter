@@ -1,0 +1,53 @@
+* [x ] Create a new project named `20-ribbeter` using the `adonis new` command
+* [ x] Run `hub create` to create a new repository on Github
+* [ x] Run `yo adonis-broccoli` to add assets to the project
+  * [x ] Add the listed `scripts` for `assets:watch` and `assets:build`
+* [ ]x Commit this as the "starting code"
+* [ x] Push `master` branch
+* [x ] Create `develop` branch
+* [x ] **Checkpoint:** Run `./ace auth:setup` to create User migrations and model!
+* [x ] **Checkpoint:** Run `./ace migration:run` to run the migrations to setup the database for users
+* [x] **Checkpoint:** Create a `layout` view
+  * [ ] Add top nav
+  * [ ] Link a stylesheet to `/dist/app.css` to include SASS styles
+  * [ ] Make a block so that views that extend from `layout` can put content in to the page
+  * [ ] Style it!
+* [ ] **Checkpoint:** Create a `register` page
+  * [ ] Generate a User controller with `./ace make:controller`
+  * [ ] Setup router to respond to `/register` for `get` and `post` requests
+  * [ ] Setup view for `user.create` that extends from `layout`
+  * [ ] Make HTML for form using `form` helper (adding classes where needed)
+  * [ ] Style it!
+  * [ ] **Checkpoint:** Store user when `register` is posted to
+  * [ ] Grab user input
+  * [ ] Try to:
+    * [ ] Store a new user with the form inputs
+    * [ ] Login the user automatically
+    * [ ] Send a success message
+    * [ ] Redirect to `/users`
+  * [ ] If there was an error, catch it
+    * [ ] Send back all inputs except `password`
+    * [ ] Send back an error message
+    * [ ] Redirect back
+
+* [ ] **Checkpoint:** Create a `login` page
+  * [ ] Generate a Login controller with `./ace make:controller`
+  * [ ] Setup router to respond to `/login` for `get` and `post` requests
+  * [ ] Setup view for `login.create` that extends from `layout`
+  * [ ] Make HTML for form using `form` helper (adding classes where needed)
+* [ ] **Checkpoint:** Store user when `login` is posted to
+  * [ ] Grab user input
+  * [ ] Try to:
+    * [ ] Attempt to login the user
+    * [ ] Send a success message
+    * [ ] Redirect to `/users`
+  * [ ] If there was an error, catch it
+    * [ ] Send back all inputs except `password`
+    * [ ] Send back an error message
+    * [ ] Redirect back
+    * [ ] **Checkpoint:** Create a `users` page
+      * [ ] Setup router to respond to `/users` for `get` and `post` requests
+      * [ ] Setup view for `user.index` that extends from `layout`
+      * [ ] In controller get all users using the `User` model (`App/Model/User`)
+      * [ ] Send this user information to the view (note this will require calling `.toJSON()` on the users array)
+      * [ ] Using NJK loop through the users and show a card with the `username` and `email` (fake the picture with a picture of your favorite placholder image [square please])
