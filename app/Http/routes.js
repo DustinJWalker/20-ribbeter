@@ -26,3 +26,6 @@ Route.post('/register', 'UserController.store');
 Route.get('/login', 'LoginController.create');
 // responds to submitted login form
 Route.post('/login', 'LoginContoller.store');
+
+Route.get('/users', 'LoginController.create');
+Route.post('/users', 'LoginController.store');
