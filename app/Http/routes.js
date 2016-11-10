@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +15,14 @@
 | Route.resource('user', 'UserController')
 */
 
-const Route = use('Route')
+const Route = use('Route');
 
-Route.on('/').render('welcome')
+Route.on('/').render('welcome');
+
+Route.get('/register', 'UserController.create');
+Route.post('/register', 'UserController.store');
+
+// show login form
+Route.get('/login', 'LoginController.create');
+// responds to submitted login form
+Route.post('/login', 'LoginContoller.store');

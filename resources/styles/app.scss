@@ -1,12 +1,24 @@
 // @import 'yoga-sass/assets/yoga';
 // @import 'normalize-css/normalize';
 
+$c-primary: #96ca2d;
+$c-light: #b5e655;
+$c-secondary: #4bb5c1;
+$c-secondary-light: #7FC6BC;
+$c-white: #edf7f2;
+$c-pure-white: #fff;
+
+$m-gutter: 1rem;
+$m-max-width: 60rem;
+
+$font: 'Dosis', sans-serif;
+
 $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 @import 'font-awesome/scss/font-awesome';
 @import 'box-sizing';
 
 // @import 'adonis';
-
+// box-shadow: 0.2rem 0.2rem 0.4rem rgba(#000, 0.4)
 body {
   margin: 0 auto;
   background: #EDF7F2;
@@ -18,8 +30,8 @@ a {
 }
 
 .top__nav {
-  background: #97C93C;
-  color: #eee;
+  background: $c-primary  ;
+  color: $c-white;
 
   &-title {
     font-size: 1.5rem;

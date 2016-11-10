@@ -7,21 +7,44 @@
     <link rel="stylesheet" href="/dist/app.css" media="screen" title="no title">
   </head>
   <body>
-  <div class="section">
     <nav class="top__nav">
       <div class="top__nav-title">
         <p>Ribbeter</p>
       </div>
       <div class="top__nav-items">
-        <p><a href="#"></a>Ribbets</p>
-        <p><a href="#"></a>Frogs</p>
-        <p><a href="#"></a>Login</p>
+        <p><a href="/"></a>Ribbets</p>
+        <p><a href="/users"></a>Frogs</p>
+        <p><a href="/"></a>Login</p>
       </div>
     </nav>
 
+    <div class="section">
+  <div class="container">
+    {% if old('error') %}
 
+    <div class="alert alert-danger">
+      <p>{{ old('error') }}</p>
 
+    </div>
+    {% endif %}
+
+    {% if old('success') %}
+
+    <div class="alert alert-success">
+      <p>{{ old('success') }}</p>
+
+    </div>
+    {% endif %}
+
+    {% block content %}
+
+    {% endblock %}
   </div>
+</div>
+
+
+
+
 
     {% block name %}
 
