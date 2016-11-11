@@ -54,3 +54,10 @@ input {
   border-bottom: 0.1rem solid $c-secondary;
   font-size: 1rem;
 }
+
+.alert {
+  display: flex;
+  justify-content: center;
+  background: $c-danger;
+  color: $c-pure-white;
+}

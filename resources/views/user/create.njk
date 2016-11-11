@@ -28,7 +28,8 @@
         {{ form.password('password', null, { class: 'form-control', placeholder: 'Password' }) }}
       </div>
       <div class="button">
-        <a href="/register" class="btn__register">Register</a>
+        {{ form.submit('Login', null, { class: 'btn__register' }) }}
+
         {{ form.submit('Login', null, {class: 'btn__submit' }) }}
       </div>
 

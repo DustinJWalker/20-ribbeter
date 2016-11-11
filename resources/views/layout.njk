@@ -30,19 +30,19 @@
     <div class="section">
       <div class="container">
         {% if old('error') %}
+
         <div class="alert alert-danger">
           <p>{{ old('error') }}</p>
         </div>
+
         {% endif %}
 
-
-
         {% if old('success') %}
+
         <div class="alert alert-success">
           <p>{{ old('success') }}</p>
+
         </div>
-
-
         {% endif %}
         {% block content %}
 
