@@ -22,10 +22,8 @@ Route.on('/').render('welcome');
 Route.get('/register', 'UserController.create');
 Route.post('/register', 'UserController.store');
 
-// show login form
 Route.get('/login', 'LoginController.create');
-// responds to submitted login form
-Route.post('/login', 'LoginContoller.store');
+Route.post('/login', 'UserController.index');
+Route.any('/logout', 'LoginContoller.destroy');
 
-Route.get('/users', 'LoginController.create');
-Route.post('/users', 'LoginController.store');
+Route.get('/users', 'LoginController.create').middleware('auth');

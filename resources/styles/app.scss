@@ -1,5 +1,3 @@
-// @import 'yoga-sass/assets/yoga';
-// @import 'normalize-css/normalize';
 
 $c-primary: #96ca2d;
 $c-light: #b5e655;
@@ -13,12 +11,12 @@ $m-max-width: 60rem;
 
 $font: 'Dosis', sans-serif;
 
+// @import 'yoga-sass/assets/yoga';
+// @import 'normalize-css/normalize';
 $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 @import 'font-awesome/scss/font-awesome';
 @import 'box-sizing';
 
-// @import 'adonis';
-// box-shadow: 0.2rem 0.2rem 0.4rem rgba(#000, 0.4)
 body {
   margin: 0 auto;
   background: #EDF7F2;
