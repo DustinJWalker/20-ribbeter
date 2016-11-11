@@ -1,12 +1,17 @@
 {% extends "layout" %}
 
 {% block content %}
-<div class="page">
-  <div class="contianer">
-    <div class="card">
+  <h3 class="login">Users</h3>
 
+    <div class="grid">
+      {% for item in users%}
+        <div class="grid__item">
+          <img src="http://fillmurray.com/100/100" alt="" />
+          <div class="grid__text">
+            <p class="grid__title">{{ item.email }}</p>
+            <p class="grid__subtitle">{{ item.username }}</p>
+          </div>
+        </div>
+        {% endfor %}
     </div>
-  </div>
-</div>
-
 {% endblock %}

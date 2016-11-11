@@ -11,10 +11,6 @@ class LoginController {
     const { email, password } = request.all();
 
     try {
-      // look up user based on their email
-      // check that users password matches the input password
-      // return true if everuthing is ok
-      // return false if anything fails
       const validLogin = yield request.auth.attempt(email, password);
 
       // send a success message on the next request

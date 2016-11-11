@@ -7,12 +7,13 @@
 {{ csrfField }}
 
 
-<div class="container">
+<div class="form">
 
-  <div class="card">
-    <div class="create">
+    <div class="login">
       <h1>Create an Account</h1>
     </div>
+    <div class="content">
+
       <div class="field">
         {{ form.label ('username', 'username') }}
         {{ form.text ('unsername', null, {class: 'form-control', placeholder: 'Username'}) }}
@@ -26,11 +27,12 @@
         {{ form.label('password', 'Password') }}
         {{ form.password('password', null, { class: 'form-control', placeholder: 'Password' }) }}
       </div>
+      <div class="button">
+        <a href="/register" class="btn__register">Register</a>
+        {{ form.submit('Login', null, {class: 'btn__submit' }) }}
+      </div>
 
-    <div class="button">
-        {{ form.submit('Register', null, { class: 'register' }) }}
-        {{ form.submit('Login', null, {class: 'login' }) }}
-    </div>
+
   </div>
 </div>
 

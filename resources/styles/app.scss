@@ -5,7 +5,7 @@ $c-secondary: #4bb5c1;
 $c-secondary-light: #7FC6BC;
 $c-white: #edf7f2;
 $c-pure-white: #fff;
-
+$c-danger: #de6363;
 $m-gutter: 1rem;
 $m-max-width: 60rem;
 $box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.4);
@@ -22,7 +22,7 @@ $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 body {
   margin: 0 auto;
   background: $c-white;
-  font: $font;
+  font-family: 'Dosis', sans-serif;
 }
 
 ul {
@@ -31,6 +31,7 @@ ul {
 
 a {
   text-decoration: none;
+  color: $c-pure-white;
 }
 
 .page {
@@ -47,7 +48,7 @@ a {
   margin: 2rem auto 0;
   background: $c-pure-white;
   box-shadow: 0.2rem 0.2rem 0.4rem rgba(#000, 0.4);
-
+  font: $font;
 }
 
 .content {
@@ -65,6 +66,7 @@ a {
   display: flex;
   flex-direction: column;
   border: 0;
+  font-size: 1.25rem;
 }
 
 .button {
@@ -73,10 +75,11 @@ a {
   padding: 0.5rem;
 }
 
+
 .btn__register {
   color: $c-secondary;
   background: $c-white;
-  border: 1px solid $c-secondary-light;
+  // border: 1px solid $c-secondary-light;
   padding: 0.5rem;
 
 }
@@ -92,4 +95,12 @@ a {
 input {
   border: none;
   border-bottom: 0.1rem solid $c-secondary;
+  font-size: 1rem;
+}
+
+.alert {
+  display: flex;
+  justify-content: center;
+  background-color: $c-danger;
+  color: $c-pure-white;
 }

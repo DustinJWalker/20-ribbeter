@@ -23,7 +23,7 @@ Route.get('/register', 'UserController.create');
 Route.post('/register', 'UserController.store');
 
 Route.get('/login', 'LoginController.create');
-Route.post('/login', 'UserController.index');
+Route.post('/login', 'UserController.store');
 Route.any('/logout', 'LoginContoller.destroy');
 
-Route.get('/users', 'LoginController.create').middleware('auth');
+Route.get('/users', 'LoginController.index').middleware('auth');
