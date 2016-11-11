@@ -11,11 +11,14 @@
       <div class="top__nav-title">
         <p>Ribbeter</p>
       </div>
-      <div class="top__nav-items">
-        <p><a href="/"></a>Ribbets</p>
-        <p><a href="/users"></a>Frogs</p>
-        <p><a href="/"></a>Login</p>
-      </div>
+      <ul class="top__nav-items">
+        {% if currentUser %}
+        <li><a href="/"></a>Ribbets</li>
+        {% else %}
+        <li><a href="/users"></a>Frogs</li>
+        <li><a href="/login"></a>Login</li>
+        {% endif %}
+      </ul>
     </nav>
 
     <div class="section">
@@ -35,8 +38,8 @@
 
     </div>
     {% endif %}
-
     {% block content %}
+
 
     {% endblock %}
   </div>
@@ -46,9 +49,6 @@
 
 
 
-    {% block name %}
-
-    {% endblock %}
 
   </body>
 </html>

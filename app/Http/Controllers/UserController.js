@@ -4,6 +4,13 @@ const User = use('App/Model/User');
 const Hash = use('Hash');
 
 class UserController {
+  * index(request, response) {
+    const users = yield User.all();
+    yield response.sendView('user.index', {
+      users: users.toJSON(),
+    });
+  }
+
 
 // show a form to make a new account
   * create(request, response) {
@@ -36,9 +43,6 @@ class UserController {
       .flash();// makes this data only last for one request
       response.redirect('back');
     }
-
-
-    response.send(request.all());
   }
 
 

@@ -15,7 +15,7 @@ class LoginController {
       // check that users password matches the input password
       // return true if everuthing is ok
       // return false if anything fails
-      const validLogin = yield request.auth.attempt(email.password);
+      const validLogin = yield request.auth.attempt(email, password);
 
       // send a success message on the next request
       yield request.with({ success: 'You have logged in!' }).flash();
@@ -30,8 +30,6 @@ class LoginController {
           .flash();
         // back from where you came
       response.redirect('back');
-    } finally {
-
     }
   }
 

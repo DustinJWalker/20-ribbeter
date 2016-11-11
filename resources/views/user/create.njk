@@ -14,16 +14,16 @@
       <h1>Create an Account</h1>
     </div>
       <div class="field">
-        {{ form.label ('username', 'Enter your username') }}
+        {{ form.label ('username', 'username') }}
         {{ form.text ('unsername', null, {class: 'form-control', placeholder: 'Username'}) }}
       </div>
       <div class="field">
-        {{ form.label('email', 'Enter email address') }}
+        {{ form.label('email', 'Email') }}
         {{ form.text('email', null, { class: 'form-control', placeholder: 'Email' }) }}
       </div>
 
       <div class="field">
-        {{ form.label('password', 'Choose a strong password') }}
+        {{ form.label('password', 'Password') }}
         {{ form.password('password', null, { class: 'form-control', placeholder: 'Password' }) }}
       </div>
 
