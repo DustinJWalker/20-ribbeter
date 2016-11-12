@@ -17,7 +17,7 @@
 
 const Route = use('Route');
 
-Route.on('/').render('welcome');
+Route.on('/').render('layout');
 
 Route.get('/register', 'UserController.create');
 Route.post('/register', 'UserController.store');
@@ -26,4 +26,4 @@ Route.get('/login', 'LoginController.create');
 Route.post('/login', 'LoginController.store');
 Route.any('/logout', 'LoginContoller.destroy');
 
-Route.get('/users', 'LoginController.index').middleware('auth');
+Route.get('/users', 'UserController.index').middleware('auth');
