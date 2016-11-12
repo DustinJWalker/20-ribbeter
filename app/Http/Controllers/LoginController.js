@@ -2,6 +2,9 @@
 
 class LoginController {
 // show login from to our user
+  *index(request, response) {
+
+  }
 
   * create(request, response) {
     yield response.sendView('login.create');
@@ -34,7 +37,7 @@ class LoginController {
     yield request.auth.logout();
 
     // send an alert message
-    yield request.with({ success: 'You have logged out!' });
+    yield request.with({ success: 'You have logged out!' }).flash();
 
     // redirect to the login form
     response.redirect('/login');
