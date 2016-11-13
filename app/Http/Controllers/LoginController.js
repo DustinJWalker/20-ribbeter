@@ -2,9 +2,9 @@
 
 class LoginController {
 // show login from to our user
-  *index(request, response) {
-
-  }
+    // *index(request, response) {
+    //
+    // }
 
   * create(request, response) {
     yield response.sendView('login.create');

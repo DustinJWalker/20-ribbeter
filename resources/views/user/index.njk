@@ -1,9 +1,8 @@
 {% extends "layout" %}
 
 {% block content %}
-  <div class="container">
     <h3 class="users">Users</h3>
-      {# <div class="container"> #}
+
         <div class="grid">
           {% for item in users%}
           <div class="card">
@@ -11,13 +10,11 @@
             <div class="grid__item">
               <img src="http://fillmurray.com/100/100" alt="" />
               <div class="grid__text">
-                <p class="grid__title">{{ item.email }}</p>
-                <p class="grid__subtitle">{{ item.username }}</p>
+                <p class="grid__title">{{ item.username }}</p>
+                <p class="grid__subtitle">${{ item.username }}</p>
               </div>
             </div>
             {% endfor %}
           </div>
         </div>
-  </div>
-  {# </div> #}
-{% endblock %}
+  {% endblock %}
