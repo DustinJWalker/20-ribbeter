@@ -11,13 +11,13 @@ const routes = [
   {
     path: '/',
     name: 'index',
-    component: Index
+    component: Index,
   },
 
   {
     path: '/user/:username',
     name: 'user',
-    component: User
+    component: User,
   },
 ];
 
@@ -25,6 +25,6 @@ const router = new VueRouter({
   mode: 'history',
   routes,
   base: '/app',
-)};
+});
 
 const app = new Vue({ ...App, router }).$mount('.vue-app');
