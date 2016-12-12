@@ -28,7 +28,7 @@ const babelScript = new Babel(appNoSass);
 const appScript = browserify(babelScript, {
   browserify: {
     entries: ['./index'],
-    debug: true,
+    debug: true
   },
   cache: false,
   outputFile: 'app.js',
