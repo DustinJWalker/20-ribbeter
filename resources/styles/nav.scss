@@ -1,0 +1,28 @@
+.navbar {
+  padding: 1rem;
+  background-color: $c-primary;
+  color: $c-pure-white;
+  min-width: 25rem;
+}
+
+.nav__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 25rem;
+  max-width: 65rem;
+  margin: 0 auto;
+  height: 1rem;
+
+}
+
+.nav__title {
+  display: flex;
+  font-size: 1.5rem;
+}
+
+.nav__items {
+  display: flex;
+  flex-direction: row;
+
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>20-ribbiter</title>
+    <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,500" rel="stylesheet">
+    <link rel="stylesheet" href="/dist/app.css">
+  </head>
+  <body>
+  <div class="page">
+
+    <nav class="navbar">
+      <div class="nav__container">
+
+      <div class="nav__title">
+        <p>Ribbiter</p>
+      </div>
+        <ul class="nav__items">
+          <li><a href="/app">Ribbits</a></li>
+          <li><a href="/users">Frogs</a></li>
+          {% if currentUser %}
+            <li><a href="/logout">Logout</a></li>
+          {% else %}
+          <li><a href="/login">Login</a></li>
+          {% endif %}
+        </ul>
+      </div>
+    </nav>
+
+    <div class="section">
+      <div class="container">
+        {% if old('error') %}
+
+        <div class="alert alert-danger">
+          <p>{{ old('error') }}</p>
+        </div>
+
+        {% endif %}
+
+        {% if old('success') %}
+
+        <div class="alert alert-success">
+          <p>{{ old('success') }}</p>
+
+        </div>
+        {% endif %}
+        {% block content %}
+
+
+        {% endblock %}
+      </div>
+    </div>
+  </div>
+</body>
+</html>

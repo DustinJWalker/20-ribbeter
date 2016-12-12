@@ -1,8 +1,53 @@
+
+$c-primary: #96ca2d;
+$c-light: #b5e655;
+$c-secondary: #4bb5c1;
+$c-secondary-light: #7FC6BC;
+$c-white: #edf7f2;
+$c-pure-white: #fff;
+$c-danger: #de6363;
+$m-gutter: 1rem;
+$m-max-width: 60rem;
+$box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.4);
+
+$font: 'Dosis', sans-serif;
+
 // @import 'yoga-sass/assets/yoga';
 // @import 'normalize-css/normalize';
-
 $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 @import 'font-awesome/scss/font-awesome';
 @import 'box-sizing';
+@import 'nav.scss';
+@import 'login.scss';
+@import 'index.scss';
 
-@import 'adonis';
+body {
+  margin: 0 auto;
+  background: $c-white;
+  font-family: 'Dosis', sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  padding: 0 0.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: $c-pure-white;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  border: none;
+  border-bottom: 0.1rem solid $c-secondary;
+  font-size: 1rem;
+  outline: none;
+}

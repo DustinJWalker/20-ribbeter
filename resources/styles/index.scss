@@ -1,0 +1,37 @@
+.users {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  flex-grow: 1;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 1rem;
+  &__text {
+    flex-direction: column;
+    padding-left: 0.5rem;
+  }
+  &__subtitle {
+    border-bottom: solid 0.1rem $c-secondary;
+    color: $c-secondary;
+  }
+  &__title {
+    font-size: 1.5rem;
+    font-weight: bolder;
+  }
+}
+
+.card  {
+  display: flex;
+  flex-basis: calc(100% / 3 - 1rem - 1rem);
+  margin: 1rem;
+  padding: 0 0.5rem;
+  background: $c-pure-white;
+  box-shadow: $box-shadow;
+}
+
+.users {
+  border-bottom: $c-secondary 1px solid;
+}
