@@ -1,20 +1,22 @@
-'use strict'
+'use strict';
 
-const Schema = use('Schema')
+const Schema = use('Schema');
 
 class RibbitsTableSchema extends Schema {
 
-  up () {
+  up() {
     this.create('ribbits', (table) => {
-      table.increments()
-      table.timestamps()
-    })
+      table.increments();
+      table.integer('user_id').references('users.id');
+      table.string('body');
+      table.timestamps();
+    });
   }
 
-  down () {
-    this.drop('ribbits')
+  down() {
+    this.drop('ribbits');
   }
 
 }
 
-module.exports = RibbitsTableSchema
+module.exports = RibbitsTableSchema;
